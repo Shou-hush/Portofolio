@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga's Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <audio id="bgm" src="lagu.mp3" loop preload="auto"></audio>
+
+  <div class="top-controls">
+    <button class="ctrl-btn music-btn" id="musicBtn" type="button" onclick="toggleMusic()" aria-label="Mute atau nyalakan lagu" title="Mute">
+      <img class="img-icon icon-on"  src="icon/sound-play.png" alt="Suara menyala">
+      <img class="img-icon icon-off" src="icon/mute.png" alt="Suara mati">
+    </button>
+
+    <button class="ctrl-btn theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Ganti mode terang/gelap" title="Ganti tema">
+      <img class="img-icon icon-sun"  src="icon/light.png" alt="Mode terang">
+      <img class="img-icon icon-moon" src="icon/dark.png" alt="Mode gelap">
+    </button>
+  </div>
+
+  <div class="bg-effect"></div>
+
+  <main class="card">
+    <img src="foto.png" alt="Yoga's profile photo" class="avatar" data-photo>
+    <h1>Hi!, i'm Yogaa</h1>
+
+    <div class="buttons">
+      <button class="btn" data-open="about">
+        <span class="btn-icon"><img class="img-icon" src="icon/about.png" alt=""></span>
+        <span class="btn-label">About</span>
+      </button>
+      <button class="btn" data-open="socials">
+        <span class="btn-icon"><img class="img-icon" src="icon/sosial.png" alt=""></span>
+        <span class="btn-label">Socials</span>
+      </button>
+      <button class="btn" data-open="experience">
+        <span class="btn-icon"><img class="img-icon" src="icon/experience.png" alt=""></span>
+        <span class="btn-label">Experience</span>
+      </button>
+      <button class="btn" data-open="contact">
+        <span class="btn-icon"><img class="img-icon" src="icon/contact.png" alt=""></span>
+        <span class="btn-label">Contact</span>
+      </button>
+    </div>
+  </main>
+
+  <div class="runner-lane" aria-hidden="true">
+    <div class="runner-move">
+      <img id="runner" class="runner" src="Run/fr1.png" alt="">
+    </div>
+  </div>
+
+  <footer class="footer">© Suyoga Arpian</footer>
+
+  <section class="panel about" id="panel-about" data-dx="-250" hidden>
+    <header class="panel-bar">
+      <span class="panel-title">
+        <img class="title-icon" src="icon/about.png" alt="">
+        About Me
+      </span>
+      <button class="panel-close" type="button" aria-label="Close About Me">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <div class="panel-body">
+      <div class="hero">
+        <img src="foto.png" alt="Yoga's profile photo" data-photo>
+        <h2>I Gede Pratama Suyoga Arpian</h2>
+        <p>Informatics Student</p>
+      </div>
+
+      <div class="section">
+        <h4>Personal Info</h4>
+        <dl class="info">
+          <dt>Place &amp; Date of Birth</dt><dd>Karangasem, 18 May 2008</dd>
+          <dt>Gender</dt><dd>Male</dd>
+          <dt>University</dt><dd>Udayana University</dd>
+          <dt>Faculty</dt><dd>Faculty of Mathematics and Natural Sciences</dd>
+          <dt>Study Program</dt><dd>Informatics</dd>
+        </dl>
+      </div>
+
+      <div class="section">
+        <h4>About</h4>
+        <p>Hi, I'm Yoga, an Informatics student at Udayana University passionate about UI/UX design and front-end development. I love crafting intuitive user interfaces and bringing them to life through clean, responsive code.</p>
+      </div>
+
+      <div class="section">
+        <h4>Education</h4>
+        <ul class="timeline">
+          <li><strong>Udayana University</strong><span>Bachelor of Science <br> in Computer Science (S.Kom.) · 2026 – Present</span></li>
+          <li><strong>SMA Negeri 1 Semarapura</strong><span>Senior High School · 2023 – 2026</span></li>
+          <li><strong>SMP Negeri 3 Manggis</strong><span>Junior High School · 2020 – 2023</span></li>
+          <li><strong>SD Negeri 2 Yeh Malet</strong><span>Elementary School · 2014 – 2020</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-experience" data-dx="250" hidden>
+    <header class="panel-bar">
+      <span class="panel-title">
+        <img class="title-icon" src="icon/experience-panel.png" alt="">
+        Experience
+      </span>
+      <button class="panel-close" type="button" aria-label="Close Experience">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <div class="panel-body">
+      <ul class="timeline">
+        <li><strong>Vice Chair, Owl Journalism Club (OJC)</strong><span>Developed media strategies, edited articles, and ensured high quality journalistic output for organizational channels</span></li>
+        <li><strong>Vice Event Coordinator, PIK-R Dharma Yowana</strong><span>Coordinated the planning and execution of youth counseling and educational programs, designing event rundown and logistics</span></li>
+        <li><strong>Vice Coordinator of PDD, Genre Ambassador Selection (PilduGen) Klungkung</strong><span>Co-led the Publication, Decoration, and Documentation (PDD) team to manage event branding, photography, and video production</span></li>
+        <li><strong>PDD Staff (Publication and Documentation), GenRe Klungkung</strong><span>Produced graphic designs, social media content, and visual documentation for official organization events</span></li>
+        <li><strong>Web Development Basics</strong><span>Learning HTML, CSS, and still trying to learn JavaScript</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-socials" data-dx="-130" hidden>
+    <header class="panel-bar">
+      <span class="panel-title">
+        <img class="title-icon" src="icon/sosial-panel.png" alt="">
+        Socials
+      </span>
+      <button class="panel-close" type="button" aria-label="Close Socials">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <div class="panel-body">
+      <a class="link-row" href="https://github.com/Shou-hush" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <div>GitHub<small>github.com/Shou-hush</small></div>
+      </a>
+      <a class="link-row" href="https://instagram.com/yogs.nvm" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/></svg>
+        <div>Instagram<small>@yogs.nvm</small></div>
+      </a>
+      <a class="link-row" href="https://www.linkedin.com/in/i-gede-pratama-suyoga-arpian-6437b0382?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <div>LinkedIn<small>I Gede Pratama Suyoga Arpian</small></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-contact" data-dx="130" hidden>
+    <header class="panel-bar">
+      <span class="panel-title">
+        <img class="title-icon" src="icon/contact-panel.png" alt="">
+        Contact
+      </span>
+      <button class="panel-close" type="button" aria-label="Close Contact">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <div class="panel-body">
+      <a class="link-row" href="https://mail.google.com/mail/?view=cm&amp;to=suyogaarpian@gmail.com" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+        <div>Email<small>suyogaarpian@gmail.com</small></div>
+      </a>
+      <a class="link-row" href="tel:+6285726847908">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>Phone<small>+62 857-2684-7908</small></div>
+      </a>
+      <a class="link-row" href="https://t.me/Angtoga" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        <div>Telegram<small>@Angtoga</small></div>
+      </a>
+    </div>
+  </section>
+
+
+  <script>
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (e) {}
+    }
+    try {
+      if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-theme');
+    } catch (e) {}
+
+    const bgm = document.getElementById('bgm');
+    const musicBtn = document.getElementById('musicBtn');
+    bgm.volume = 0.6; // 0.0 - 1.0
+
+    try { bgm.muted = localStorage.getItem('muted') === '1'; } catch (e) {}
+
+    function saveMuted() {
+      try { localStorage.setItem('muted', bgm.muted ? '1' : '0'); } catch (e) {}
+    }
+
+    function updateMusicBtn() {
+      const off = bgm.paused || bgm.muted;
+      musicBtn.classList.toggle('off', off);
+      musicBtn.classList.toggle('playing', !off);
+      if (!musicBtn.classList.contains('disabled')) {
+        musicBtn.title = bgm.paused ? 'Putar lagu' : (bgm.muted ? 'Nyalakan suara' : 'Mute');
+      }
+    }
+
+    function tryPlay() { return bgm.play().catch(() => {}); }
+
+    function toggleMusic() {
+      if (bgm.paused) {        
+        bgm.muted = false;
+        saveMuted();
+        tryPlay();
+      } else {                    
+        bgm.muted = !bgm.muted;
+        saveMuted();
+      }
+      updateMusicBtn();
+    }
+
+    ['play', 'pause', 'volumechange'].forEach(ev => bgm.addEventListener(ev, updateMusicBtn));
+    bgm.addEventListener('error', () => {
+      musicBtn.classList.add('disabled');
+      musicBtn.title = 'Lagu tidak ditemukan (pastikan file lagu.mp3 ada di folder yang sama)';
+    });
+
+    tryPlay();
+    const UNLOCK_EVENTS = ['pointerdown', 'keydown', 'touchstart'];
+    function unlockAudio(e) {
+      if (e.target.closest && e.target.closest('#musicBtn')) return;
+      if (bgm.paused) tryPlay();
+    }
+    UNLOCK_EVENTS.forEach(ev => document.addEventListener(ev, unlockAudio));
+    bgm.addEventListener('play', () => {
+      UNLOCK_EVENTS.forEach(ev => document.removeEventListener(ev, unlockAudio));
+    });
+    updateMusicBtn();
+
+    const FRAME_COUNT = 10;
+    const FRAME_DELAY = 300;
+    const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => 'Run/fr' + (i + 1) + '.png');
+    FRAMES.forEach(src => { new Image().src = src; });
+
+    const runner = document.getElementById('runner');
+    let frame = 0;
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(() => {
+        frame = (frame + 1) % FRAME_COUNT;
+        runner.src = FRAMES[frame];
+      }, FRAME_DELAY);
+    }
+
+    let topZ = 100;
+    let openCount = 0;
+
+    function bringToFront(panel) { panel.style.zIndex = ++topZ; }
+    function clamp(v, min, max) { return Math.max(min, Math.min(v, max)); }
+
+    function openPanel(name) {
+      const panel = document.getElementById('panel-' + name);
+      const btn = document.querySelector('[data-open="' + name + '"]');
+      if (panel.hidden) {
+        panel.hidden = false;
+        const w = panel.offsetWidth, h = panel.offsetHeight;
+        const wide = window.innerWidth >= 760;
+        const dx = wide ? Number(panel.dataset.dx) : openCount * 24;
+        const left = clamp(window.innerWidth / 2 - w / 2 + dx, 8, window.innerWidth - w - 8);
+        const top = clamp((window.innerHeight - h) / 2 + (wide ? 0 : openCount * 24), 8, Math.max(8, window.innerHeight - h - 8));
+        panel.style.left = left + 'px';
+        panel.style.top = top + 'px';
+        openCount++;
+      }
+      btn.classList.add('active');
+      bringToFront(panel);
+    }
+
+    function closePanel(panel) {
+      panel.hidden = true;
+      openCount = Math.max(0, openCount - 1);
+      const name = panel.id.replace('panel-', '');
+      document.querySelector('[data-open="' + name + '"]').classList.remove('active');
+    }
+
+    document.querySelectorAll('[data-open]').forEach(btn => {
+      btn.addEventListener('click', () => openPanel(btn.dataset.open));
+    });
+
+    document.querySelectorAll('.panel').forEach(panel => {
+      const bar = panel.querySelector('.panel-bar');
+      const closeBtn = panel.querySelector('.panel-close');
+      let drag = null;
+
+      panel.addEventListener('pointerdown', () => bringToFront(panel));
+      closeBtn.addEventListener('click', () => closePanel(panel));
+
+      bar.addEventListener('pointerdown', e => {
+        if (e.target.closest('.panel-close')) return;
+        drag = { dx: e.clientX - panel.offsetLeft, dy: e.clientY - panel.offsetTop };
+        bar.setPointerCapture(e.pointerId);
+      });
+      bar.addEventListener('pointermove', e => {
+        if (!drag) return;
+        panel.style.left = clamp(e.clientX - drag.dx, 0, window.innerWidth - panel.offsetWidth) + 'px';
+        panel.style.top = clamp(e.clientY - drag.dy, 0, window.innerHeight - 48) + 'px';
+      });
+      const stop = () => { drag = null; };
+      bar.addEventListener('pointerup', stop);
+      bar.addEventListener('pointercancel', stop);
+    });
+  </script>
+</body>
+</html>
